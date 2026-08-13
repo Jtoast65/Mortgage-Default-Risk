@@ -303,8 +303,11 @@ Work through these in order. **Do not start a phase before the previous one's cr
       KS 0.447. Splits strictly by vintage; encoder/scaler fit on train only. Metrics in
       artifacts/metrics.json, models in models/.
 
-- [ ] **Phase 4 — XGBoost and calibration.** Isotonic on validation.
-      *Accept when:* reliability curve is rendered and Brier improves after calibration.
+- [x] **Phase 4 — XGBoost and calibration.** Isotonic on validation.
+      *Accepted:* reliability curve rendered (artifacts/reliability_curve_A.png); Brier
+      0.0504 → 0.0087 after isotonic (−83%). XGBoost (AUC 0.751) beats the scorecard but
+      not logistic (0.791) — reported honestly as a regime-shift finding, not tuned away.
+      Native categorical (incl. msa), scale_pos_weight, auc early-stopping on validation.
 
 - [ ] **Phase 5 — Economics.** LGD, expected loss, cutoff sweep to JSON.
       *Accept when:* the headline sentence in section 7 can be written with real numbers.

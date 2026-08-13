@@ -43,7 +43,7 @@ FICO_BINS = [300, 620, 660, 700, 740, 780, 851]
 LTV_BINS = [0, 60, 70, 80, 90, 95, 200]
 
 NUMERIC_COLS = list(NUMERIC_RANGES)
-# msa is dropped from the linear model (hundreds of levels); XGBoost can use it in Phase 4.
+# msa is dropped from the linear model (hundreds of levels); XGBoost uses it natively.
 LOGISTIC_CATEGORICALS = [c for c in CATEGORICAL_FEATURES if c != "msa"]
 
 
@@ -102,6 +102,64 @@ def make_logistic(columns) -> Pipeline:
     ], remainder="drop")
     return Pipeline([("pre", pre),
                      ("clf", LogisticRegression(max_iter=2000))])
+
+
+# ------------------------------------------------------------------------- xgboost
+
+def xgb_feature_frame(df: pd.DataFrame, categories: dict | None = None):
+    """Build the XGBoost design matrix with native dtypes.
+
+    Numerics stay float (NaN preserved -- XGBoost handles missing natively); every
+    categorical, INCLUDING high-cardinality msa, becomes a pandas category. Passing
+    `categories` from the train split pins the category set so val/test encode identically
+    and unseen levels map to missing -- no target encoding, so no leakage.
+    """
+    X = pd.DataFrame(index=df.index)
+    for c in NUMERIC_COLS:
+        X[c] = pd.to_numeric(df[c], errors="coerce")
+    for c in [c for c in df.columns if c.endswith("_missing")]:
+        X[c] = df[c].astype(float)
+    out_cats = {}
+    for c in CATEGORICAL_FEATURES:
+        s = df[c].astype("object")
+        if categories is None:
+            col = s.astype("category")
+        else:
+            # Null out unseen levels first, then pin -- no leakage, no deprecation warning.
+            col = pd.Categorical(s.where(s.isin(categories[c])), categories=categories[c])
+        X[c] = col
+        out_cats[c] = X[c].cat.categories if categories is None else pd.Index(categories[c])
+    return X, out_cats
+
+
+def train_xgboost(train: pd.DataFrame, val: pd.DataFrame):
+    """Fit XGBoost with scale_pos_weight for imbalance and early stopping on validation."""
+    from xgboost import XGBClassifier
+
+    Xtr, cats = xgb_feature_frame(train)
+    Xva, _ = xgb_feature_frame(val, cats)
+    Xva = Xva[Xtr.columns]
+    ytr, yva = train["default_label"], val["default_label"]
+    spw = float((ytr == 0).sum() / max((ytr == 1).sum(), 1))
+
+    # Early-stop on AUC, not logloss: the validation split (2018-19) carries a COVID-
+    # inflated base rate, so logloss is a poor stopping guide there; AUC targets the ranking
+    # we actually report and is robust to the base-rate shift. scale_pos_weight is kept per
+    # spec -- it inflates the raw scores, which isotonic calibration then corrects.
+    clf = XGBClassifier(
+        n_estimators=1000, max_depth=5, learning_rate=0.03,
+        subsample=0.8, colsample_bytree=0.8, min_child_weight=5,
+        reg_lambda=1.0, tree_method="hist", enable_categorical=True,
+        eval_metric="auc", early_stopping_rounds=50,
+        scale_pos_weight=spw, random_state=42,
+    )
+    clf.fit(Xtr, ytr, eval_set=[(Xva, yva)], verbose=False)
+    return clf, cats, list(Xtr.columns)
+
+
+def xgb_scores(clf, cats, cols, split: pd.DataFrame) -> np.ndarray:
+    X, _ = xgb_feature_frame(split, cats)
+    return clf.predict_proba(X[cols])[:, 1]
 
 
 # ------------------------------------------------------------------------- metrics

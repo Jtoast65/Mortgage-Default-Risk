@@ -31,12 +31,20 @@ Experiment A (modern regime) — train 2010–17, validation 2018–19, **test 2
 | Model | AUC | KS | Brier |
 |---|---|---|---|
 | Scorecard (FICO × LTV) | 0.718 | 0.330 | 0.00857 |
-| Logistic regression | 0.791 | 0.447 | 0.00859 |
-| XGBoost | TBD | TBD | TBD |
-| XGBoost + isotonic calibration | TBD | TBD | TBD |
+| **Logistic regression** | **0.791** | **0.447** | 0.00859 |
+| XGBoost (raw) | 0.751 | 0.384 | 0.05041 |
+| XGBoost + isotonic calibration | 0.748 | 0.375 | 0.00869 |
 
-Logistic beats the interpretable FICO×LTV scorecard by ~0.07 AUC — the expected lift from
-using the full origination feature set. XGBoost and calibration land in the next phase.
+**Finding, reported rather than tuned away:** on this strict vintage split, the regularized
+logistic regression is the best discriminator. Gradient boosting beats the crude FICO×LTV
+scorecard but does **not** beat the linear model — the 2017→2020 regime shift (and a
+COVID-inflated 2019 validation base rate) rewards the smoother model, and XGBoost is not
+tuned against the held-out test set to hide that.
+
+**Calibration works as intended.** XGBoost trained with `scale_pos_weight` ranks well but
+its raw probabilities are badly inflated (Brier 0.050). Isotonic regression fit on the
+validation split alone cuts that to 0.0087 — an 83% reduction — bringing the probabilities
+onto the diagonal (see `artifacts/reliability_curve_A.png`) so they can price a loan.
 
 ## Reproduce
 

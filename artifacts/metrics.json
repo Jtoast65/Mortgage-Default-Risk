@@ -52,7 +52,26 @@
           "ks": 0.4468,
           "brier": 0.008592
         }
+      },
+      "xgboost": {
+        "test": {
+          "n": 82413,
+          "base_rate": 0.00866,
+          "auc": 0.751,
+          "ks": 0.3835,
+          "brier": 0.050411
+        }
+      },
+      "xgboost_calibrated": {
+        "test": {
+          "n": 82413,
+          "base_rate": 0.00866,
+          "auc": 0.7481,
+          "ks": 0.3747,
+          "brier": 0.008691
+        }
       }
-    }
+    },
+    "best_iteration": 124
   }
 }
