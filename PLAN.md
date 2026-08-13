@@ -291,10 +291,12 @@ Work through these in order. **Do not start a phase before the previous one's cr
       parse (1.4M loans, 74.9M perf rows), row counts match the raw files exactly, five rows
       eyeballed against raw text. 8.0 GB raw → 731 MB parquet.
 
-- [ ] **Phase 2 — Label and features.** 24-month window, leakage assertion in place.
-      *Accept when:* the leakage assertion is proven to fail on a deliberately bad feature
-      matrix, and default rates by vintage year are plotted and look like history —
-      **2006–2007 must spike.** If they do not, the label is wrong.
+- [x] **Phase 2 — Label and features.** 24-month window, leakage assertion in place.
+      *Accepted:* leakage guard proven to fail on a deliberately bad matrix (3 tests);
+      build_label() unit-tested on hand-checked loans. Vintage default rates plotted
+      (artifacts/vintage_default_rate.png) — **2007 spikes to 5.3%**, 2006/08 elevated,
+      2019 flagged as COVID-forbearance artifact. 957k loans kept, 405k censored/dropped,
+      overall default rate 1.32%.
 
 - [ ] **Phase 3 — Baseline.** Scorecard and logistic regression, Experiment A.
       *Accept when:* AUC and KS are reported for both.

@@ -1,4 +1,4 @@
-.PHONY: install ingest label train calibrate economics serve test lint
+.PHONY: install ingest label features plots train calibrate economics serve test lint
 
 install:
 	pip install -r requirements.txt
@@ -8,6 +8,12 @@ ingest:
 
 label:
 	python -m src.labels
+
+features:
+	python -m src.features
+
+plots:
+	python -m src.evaluate
 
 train:
 	python -m src.models
