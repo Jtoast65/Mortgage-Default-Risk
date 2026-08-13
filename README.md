@@ -25,11 +25,18 @@ gitignored. See `scripts/download_instructions.md` to obtain it.
 
 ## Results
 
-| Model | AUC | KS | Brier (raw → calibrated) |
+Experiment A (modern regime) — train 2010–17, validation 2018–19, **test 2020–21**
+(n = 82,413, base default rate 0.87%):
+
+| Model | AUC | KS | Brier |
 |---|---|---|---|
-| Scorecard (FICO × LTV) | TBD | TBD | TBD |
-| Logistic regression | TBD | TBD | TBD |
+| Scorecard (FICO × LTV) | 0.718 | 0.330 | 0.00857 |
+| Logistic regression | 0.791 | 0.447 | 0.00859 |
 | XGBoost | TBD | TBD | TBD |
+| XGBoost + isotonic calibration | TBD | TBD | TBD |
+
+Logistic beats the interpretable FICO×LTV scorecard by ~0.07 AUC — the expected lift from
+using the full origination feature set. XGBoost and calibration land in the next phase.
 
 ## Reproduce
 

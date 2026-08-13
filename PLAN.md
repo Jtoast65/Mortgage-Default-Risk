@@ -298,8 +298,10 @@ Work through these in order. **Do not start a phase before the previous one's cr
       2019 flagged as COVID-forbearance artifact. 957k loans kept, 405k censored/dropped,
       overall default rate 1.32%.
 
-- [ ] **Phase 3 — Baseline.** Scorecard and logistic regression, Experiment A.
-      *Accept when:* AUC and KS are reported for both.
+- [x] **Phase 3 — Baseline.** Scorecard and logistic regression, Experiment A.
+      *Accepted (test 2020–21):* scorecard AUC 0.718 / KS 0.330; logistic AUC 0.791 /
+      KS 0.447. Splits strictly by vintage; encoder/scaler fit on train only. Metrics in
+      artifacts/metrics.json, models in models/.
 
 - [ ] **Phase 4 — XGBoost and calibration.** Isotonic on validation.
       *Accept when:* reliability curve is rendered and Brier improves after calibration.
