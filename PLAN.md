@@ -42,10 +42,9 @@ spec is made for that reader. Two consequences that override normal instincts:
 
 Stop and ask Joey when you reach one of these. Do not attempt to work around them.
 
-- [ ] **Register at Clarity Data Intelligence and accept the Freddie Mac licence.**
-      `claritydownload.fmapps.freddiemac.com/CRT/#/sflld` — requires creating an account.
-      Joey does this and downloads the files by hand.
-- [ ] **Create the GitHub repo** (suggested name: `mortgage-default-risk`).
+- [x] **Register at Clarity Data Intelligence and accept the Freddie Mac licence.**
+      Done 2026-08-13. Sample dataset 1999–2026 + layout docs downloaded.
+- [x] **Create the GitHub repo.** `github.com/Jtoast65/Mortgage-Default-Risk`.
 - [ ] **Create the Render service** for the API and the **Vercel project** for the frontend.
 - [ ] ~~Any `git push`~~ — **Claude may commit and push directly.** Joey has authorized
       Claude Code to run `git push` on his behalf. Still branch off the default branch for
@@ -283,13 +282,14 @@ all read as junior to this audience.
 
 Work through these in order. **Do not start a phase before the previous one's criteria pass.**
 
-- [ ] **Phase 0 — Scaffold.** Repo structure, `.gitignore` with `data/`, `PLAN.md`,
-      dependencies pinned.
-      *Accept when:* `pytest` runs green on an empty suite.
+- [x] **Phase 0 — Scaffold.** Repo structure, `.gitignore` with `data/`, `PLAN.md`,
+      dependencies pinned. *Accepted:* `pytest` green. Storage: DuckDB + parquet (not
+      Postgres) — the API serves committed JSON, so no runtime DB is needed.
 
-- [ ] **Phase 1 — Ingest.** Layout spec written from the official PDF, parser to parquet.
-      *Accept when:* one vintage quarter parses, row count matches the file, and a sample
-      of five rows has been eyeballed against the raw text.
+- [x] **Phase 1 — Ingest.** Layout spec written from the official July-2026 XLSX (31 orig /
+      35 perf cols), DuckDB parser to hive-partitioned parquet. *Accepted:* all 28 vintages
+      parse (1.4M loans, 74.9M perf rows), row counts match the raw files exactly, five rows
+      eyeballed against raw text. 8.0 GB raw → 731 MB parquet.
 
 - [ ] **Phase 2 — Label and features.** 24-month window, leakage assertion in place.
       *Accept when:* the leakage assertion is proven to fail on a deliberately bad feature
