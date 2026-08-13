@@ -5,26 +5,53 @@ The raw data is **not** in this repo. The Freddie Mac licence prohibits redistri
 
 ## Steps
 
-1. Register at **Clarity Data Intelligence** and accept the Single-Family Loan-Level licence:
-   `https://claritydownload.fmapps.freddiemac.com/CRT/#/sflld`
-2. Download the **official sample dataset** — a random 50,000-loan sample per origination
-   year with matching monthly performance records (~1.3M loans across history). Do **not**
-   download the full ~55M-loan files; they will not fit on a laptop and are not needed.
-3. Also download the **file-layout PDF**. `src/layouts.py` is transcribed from it — column
-   positions are never guessed.
-4. Unzip into `data/raw/` so you have, per vintage quarter:
-   - `historical_data_YYYYQN.txt` — origination records
-   - `historical_data_time_YYYYQN.txt` — monthly performance
+1. Register at **Clarity Data Intelligence** and accept the Single-Family Loan-Level Dataset
+   terms. Start at `https://capitalmarkets.freddiemac.com/clarity`, then follow
+   **Access Historical Data** → the SFLLD Data Download page.
+2. Download the **Sample Dataset** — a random 50,000-loan sample per origination year with
+   matching monthly performance (~1.4M loans, ~75M performance rows across 1999–2026). Do
+   **not** download the full ~56M-loan Standard/Non-Standard files; they will not fit on a
+   laptop and are not needed.
+3. From the SFLLD page sidebar, also grab the layout docs (the **"Effective July 2026"**
+   set, which matches the current sample release):
+   - **File Layout – Effective July 2026** (`.xlsx`) — authoritative column spec; `src/layouts.py`
+     is transcribed from it.
+   - **General User Guide – Effective July 2026** (`.pdf`) — coded values (delinquency status,
+     zero-balance codes) used by the label logic.
+   - **File Headers – Effective July 2026** (`.zip`) — header rows, used to cross-check order.
 
-## Vintages to pull
+## What the files look like
 
-- **Modern regime:** 2010–2021 (headline metrics, Experiment A)
-- **Crisis regime:** 1999–2009 (stress-test story, Experiment B)
+The sample arrives as one zip per year, `sample_YYYY.zip`, each containing two
+pipe-delimited files with **no header row**:
 
-## Expected local layout (all gitignored)
+| File | Contents | Layout |
+|---|---|---|
+| `sample_orig_YYYY.txt` | Origination records, one row per loan | 31 columns |
+| `sample_perf_YYYY.txt` | Monthly performance, many rows per loan | 35 columns |
+
+## Unpack into `data/raw/` (all gitignored)
+
+```bash
+for z in ~/Downloads/sample_*.zip; do unzip -o "$z" -d data/raw/; done
+```
+
+Then build the parquet:
+
+```bash
+python -m src.ingest          # all vintages -> data/processed/{origination,performance}/vintage=YYYY/
+```
+
+Resulting local layout:
 
 ```
 data/
-├── raw/         # unzipped .txt files, as downloaded
-└── processed/   # parquet written by src/ingest.py
+├── raw/         # sample_orig_YYYY.txt / sample_perf_YYYY.txt  (~8 GB)
+└── processed/   # hive-partitioned parquet written by src/ingest.py  (~730 MB)
 ```
+
+## Vintages
+
+The sample covers **1999–2026**. This project uses:
+- **Modern regime:** 2010–2021 (headline metrics, Experiment A)
+- **Crisis regime:** 1999–2009 (stress-test story, Experiment B)

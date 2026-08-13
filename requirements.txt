@@ -1,7 +1,9 @@
-# Data ingestion
+# Data ingestion / storage
 pandas>=2.0.0
 numpy>=1.26.0
 pyarrow>=14.0.0
+duckdb>=1.0.0             # parse pipe-delimited files to parquet; SQL over ~90M perf rows
+openpyxl>=3.1.0          # read the official file-layout .xlsx when refreshing layouts.py
 
 # ML
 scikit-learn>=1.4.0        # isotonic calibration, logistic regression, metrics
