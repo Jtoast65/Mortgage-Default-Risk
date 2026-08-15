@@ -45,7 +45,8 @@ Stop and ask Joey when you reach one of these. Do not attempt to work around the
 - [x] **Register at Clarity Data Intelligence and accept the Freddie Mac licence.**
       Done 2026-08-13. Sample dataset 1999–2026 + layout docs downloaded.
 - [x] **Create the GitHub repo.** `github.com/Jtoast65/Mortgage-Default-Risk`.
-- [ ] **Create the Render service** for the API and the **Vercel project** for the frontend.
+- [x] **Create the Render service** for the API (`mortgage-default-risk-api.onrender.com`).
+      Still to do: the **Vercel project** for the frontend.
 - [ ] ~~Any `git push`~~ — **Claude may commit and push directly.** Joey has authorized
       Claude Code to run `git push` on his behalf. Still branch off the default branch for
       non-trivial work and summarize what was pushed.
@@ -322,10 +323,10 @@ Work through these in order. **Do not start a phase before the previous one's cr
       crisis model under-predicts defaults 41% (0.59× actual) because it was calibrated on
       pre-crisis 2006. Modern model over-predicts 50% (COVID-inflated 2019 validation).
 
-- [~] **Phase 7 — API.** All five endpoints built and verified locally (`/health`,
-      `/metrics`, `/cutoff-curve`, `/score`, `/vintage-performance`); Pydantic on every
-      request/response, `/docs` loads (200), `/score` discriminates (risky 16.7% vs safe
-      0%). Dockerfile + render.yaml ready. **Render deploy pending — human-only (Joey).**
+- [x] **Phase 7 — API.** All five endpoints live on Render
+      (`https://mortgage-default-risk-api.onrender.com`, `/docs` loads publicly). Pydantic
+      on every request/response; `/score` discriminates (risky 16.7% vs safe 0%). Serves
+      committed artifacts + the deployed calibrated-logistic (no DB, cold-start safe).
 
 - [ ] **Phase 8 — Frontend.** Cutoff panel first, then the rest.
       *Accept when:* screenshots at 1440px and 390px have been rendered **and actually

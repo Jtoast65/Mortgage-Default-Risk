@@ -98,6 +98,8 @@ artifacts and the deployed calibrated-logistic model, so it answers even on a co
 | `POST /score` | Origination features in → calibrated PD, risk band, expected loss |
 | `GET /vintage-performance` | Default rate by origination year |
 
+**Live:** https://mortgage-default-risk-api.onrender.com/docs
+
 ```bash
 make serve   # http://localhost:8000/docs
 ```
