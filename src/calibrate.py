@@ -34,6 +34,17 @@ def plot_reliability(y_test, p_raw, p_cal, brier_raw, brier_cal, exp: str) -> No
     fr_raw, mp_raw = calibration_curve(y_test, p_raw, n_bins=10, strategy="quantile")
     fr_cal, mp_cal = calibration_curve(y_test, p_cal, n_bins=10, strategy="quantile")
 
+    # Also emit the points as JSON so the frontend can render the curve in Recharts.
+    (ARTIFACTS / f"reliability_curve_{exp}.json").write_text(json.dumps({
+        "experiment": exp,
+        "brier_raw": round(float(brier_raw), 6),
+        "brier_calibrated": round(float(brier_cal), 6),
+        "raw": [{"mean_predicted": float(mp), "observed": float(fr)}
+                for mp, fr in zip(mp_raw, fr_raw)],
+        "calibrated": [{"mean_predicted": float(mp), "observed": float(fr)}
+                       for mp, fr in zip(mp_cal, fr_cal)],
+    }, indent=2))
+
     fig, ax = plt.subplots(figsize=(6.2, 6.2), dpi=140)
     fig.patch.set_facecolor(_BG)
     ax.set_facecolor(_BG)

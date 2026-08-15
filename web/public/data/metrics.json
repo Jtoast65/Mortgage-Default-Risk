@@ -1,0 +1,152 @@
+{
+  "A": {
+    "experiment": "A",
+    "split": {
+      "train": [
+        2010,
+        2017
+      ],
+      "val": [
+        2018,
+        2019
+      ],
+      "test": [
+        2020,
+        2021
+      ]
+    },
+    "counts": {
+      "train": 336394,
+      "validation": 57085,
+      "test": 82413
+    },
+    "models": {
+      "scorecard": {
+        "validation": {
+          "n": 57085,
+          "base_rate": 0.03295,
+          "auc": 0.6681,
+          "ks": 0.2529,
+          "brier": 0.032405
+        },
+        "test": {
+          "n": 82413,
+          "base_rate": 0.00866,
+          "auc": 0.7181,
+          "ks": 0.3295,
+          "brier": 0.008567
+        }
+      },
+      "logistic": {
+        "validation": {
+          "n": 57085,
+          "base_rate": 0.03295,
+          "auc": 0.7005,
+          "ks": 0.2945,
+          "brier": 0.032265
+        },
+        "test": {
+          "n": 82413,
+          "base_rate": 0.00866,
+          "auc": 0.7908,
+          "ks": 0.4468,
+          "brier": 0.008592
+        }
+      },
+      "xgboost": {
+        "test": {
+          "n": 82413,
+          "base_rate": 0.00866,
+          "auc": 0.751,
+          "ks": 0.3835,
+          "brier": 0.050411
+        }
+      },
+      "xgboost_calibrated": {
+        "test": {
+          "n": 82413,
+          "base_rate": 0.00866,
+          "auc": 0.7481,
+          "ks": 0.3747,
+          "brier": 0.008691
+        }
+      }
+    },
+    "best_iteration": 124
+  },
+  "B": {
+    "experiment": "B",
+    "split": {
+      "train": [
+        1999,
+        2005
+      ],
+      "val": [
+        2006,
+        2006
+      ],
+      "test": [
+        2007,
+        2009
+      ]
+    },
+    "counts": {
+      "train": 234796,
+      "validation": 41093,
+      "test": 113097
+    },
+    "models": {
+      "scorecard": {
+        "validation": {
+          "n": 41093,
+          "base_rate": 0.02655,
+          "auc": 0.758,
+          "ks": 0.3943,
+          "brier": 0.025584
+        },
+        "test": {
+          "n": 113097,
+          "base_rate": 0.0334,
+          "auc": 0.7987,
+          "ks": 0.4584,
+          "brier": 0.032168
+        }
+      },
+      "logistic": {
+        "validation": {
+          "n": 41093,
+          "base_rate": 0.02655,
+          "auc": 0.8033,
+          "ks": 0.4599,
+          "brier": 0.025086
+        },
+        "test": {
+          "n": 113097,
+          "base_rate": 0.0334,
+          "auc": 0.8551,
+          "ks": 0.5563,
+          "brier": 0.03107
+        }
+      },
+      "xgboost": {
+        "test": {
+          "n": 113097,
+          "base_rate": 0.0334,
+          "auc": 0.816,
+          "ks": 0.476,
+          "brier": 0.120128
+        }
+      },
+      "xgboost_calibrated": {
+        "test": {
+          "n": 113097,
+          "base_rate": 0.0334,
+          "auc": 0.8149,
+          "ks": 0.472,
+          "brier": 0.030887
+        }
+      }
+    },
+    "best_iteration": 85
+  }
+}

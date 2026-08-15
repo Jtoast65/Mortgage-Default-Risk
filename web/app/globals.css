@@ -1,0 +1,123 @@
+/* Risk-desk terminal design system (PLAN.md section 10). Restrained, dense, precise. */
+:root {
+  --bg: #0B0E14;
+  --surface: #151A23;
+  --surface-2: #1E252F;
+  --text: #E6EAF0;
+  --muted: #8B97A8;
+  --accent: #4F8EF7;
+  --red: #E5484D; /* reserved strictly for loss and default */
+  --hairline: #252C38;
+
+  --s1: 8px;
+  --s2: 16px;
+  --s3: 24px;
+  --s4: 32px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), Inter, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mono {
+  font-family: var(--font-mono), "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+h1, h2, h3 { font-weight: 600; margin: 0; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: var(--s4) var(--s3) 64px;
+}
+
+/* Panels — 1px hairline borders, no drop shadows. */
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: var(--s3);
+}
+.panel + .panel { margin-top: var(--s2); }
+
+.panel-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.panel-sub, .caption {
+  font-size: 12px;
+  color: var(--muted);
+}
+.caption { margin-top: var(--s1); }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s2); }
+
+.stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+
+.metric-value { font-size: 32px; line-height: 1.1; letter-spacing: -0.5px; }
+.metric-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.metric-red { color: var(--red); }
+
+.hairline { height: 1px; background: var(--hairline); border: 0; margin: var(--s2) 0; }
+
+/* Slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  background: var(--hairline);
+  border-radius: 2px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: 2px solid var(--bg);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: 2px solid var(--bg);
+}
+
+/* Skeleton loaders (not spinners). */
+.skeleton {
+  background: linear-gradient(90deg, var(--surface-2) 25%, #232b37 37%, var(--surface-2) 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+  border-radius: 4px;
+}
+@keyframes shimmer { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
+
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--hairline); }
+th { color: var(--muted); font-weight: 500; font-size: 12px; }
+td.num, th.num { text-align: right; }
+
+@media (max-width: 720px) {
+  .page { padding: var(--s3) var(--s2) 48px; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .stat-row { grid-template-columns: repeat(2, 1fr); }
+  .metric-value { font-size: 26px; }
+}

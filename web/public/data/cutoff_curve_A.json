@@ -1,0 +1,3222 @@
+{
+  "experiment": "A",
+  "model": "logistic_isotonic",
+  "lgd": 0.4555,
+  "lgd_source": "empirical",
+  "lgd_n_dispositions": 15130,
+  "ead_total": 23429424000.0,
+  "n_applicants": 82413,
+  "base_default_rate": 0.00866,
+  "headline": {
+    "cutoff": 0.04,
+    "approval_rate": 0.9442,
+    "model_realized_loss_per_1b": 3009523.41,
+    "scorecard_realized_loss_per_1b": 3489224.75,
+    "reduction_per_1b": 479701.34,
+    "reduction_pct": 13.7
+  },
+  "curve": [
+    {
+      "cutoff": 0.0,
+      "approval_rate": 0.0,
+      "expected_loss_per_1b": 0.0,
+      "realized_loss_per_1b": 0.0,
+      "defaults_approved": 0,
+      "good_rejected": 81699
+    },
+    {
+      "cutoff": 0.00503,
+      "approval_rate": 0.34505,
+      "expected_loss_per_1b": 330135.28,
+      "realized_loss_per_1b": 222175.93,
+      "defaults_approved": 41,
+      "good_rejected": 53303
+    },
+    {
+      "cutoff": 0.01005,
+      "approval_rate": 0.53227,
+      "expected_loss_per_1b": 1062845.78,
+      "realized_loss_per_1b": 521553.52,
+      "defaults_approved": 92,
+      "good_rejected": 37925
+    },
+    {
+      "cutoff": 0.01508,
+      "approval_rate": 0.67618,
+      "expected_loss_per_1b": 1910787.71,
+      "realized_loss_per_1b": 1021021.64,
+      "defaults_approved": 174,
+      "good_rejected": 26147
+    },
+    {
+      "cutoff": 0.0201,
+      "approval_rate": 0.72593,
+      "expected_loss_per_1b": 2308713.37,
+      "realized_loss_per_1b": 1229685.82,
+      "defaults_approved": 208,
+      "good_rejected": 22081
+    },
+    {
+      "cutoff": 0.02513,
+      "approval_rate": 0.85706,
+      "expected_loss_per_1b": 3657985.46,
+      "realized_loss_per_1b": 2126613.23,
+      "defaults_approved": 360,
+      "good_rejected": 11426
+    },
+    {
+      "cutoff": 0.03015,
+      "approval_rate": 0.9037,
+      "expected_loss_per_1b": 4232953.75,
+      "realized_loss_per_1b": 2538711.86,
+      "defaults_approved": 432,
+      "good_rejected": 7654
+    },
+    {
+      "cutoff": 0.03518,
+      "approval_rate": 0.93874,
+      "expected_loss_per_1b": 4750882.07,
+      "realized_loss_per_1b": 2918265.64,
+      "defaults_approved": 497,
+      "good_rejected": 4832
+    },
+    {
+      "cutoff": 0.0402,
+      "approval_rate": 0.9442,
+      "expected_loss_per_1b": 4842743.87,
+      "realized_loss_per_1b": 3009523.41,
+      "defaults_approved": 510,
+      "good_rejected": 4395
+    },
+    {
+      "cutoff": 0.04523,
+      "approval_rate": 0.98666,
+      "expected_loss_per_1b": 5598763.83,
+      "realized_loss_per_1b": 3767328.4,
+      "defaults_approved": 644,
+      "good_rejected": 1029
+    },
+    {
+      "cutoff": 0.05025,
+      "approval_rate": 0.98666,
+      "expected_loss_per_1b": 5598763.83,
+      "realized_loss_per_1b": 3767328.4,
+      "defaults_approved": 644,
+      "good_rejected": 1029
+    },
+    {
+      "cutoff": 0.05528,
+      "approval_rate": 0.9921,
+      "expected_loss_per_1b": 5711591.06,
+      "realized_loss_per_1b": 3883198.94,
+      "defaults_approved": 667,
+      "good_rejected": 604
+    },
+    {
+      "cutoff": 0.0603,
+      "approval_rate": 0.9975,
+      "expected_loss_per_1b": 5839379.33,
+      "realized_loss_per_1b": 4033286.29,
+      "defaults_approved": 691,
+      "good_rejected": 183
+    },
+    {
+      "cutoff": 0.06533,
+      "approval_rate": 0.998,
+      "expected_loss_per_1b": 5851310.52,
+      "realized_loss_per_1b": 4055935.48,
+      "defaults_approved": 695,
+      "good_rejected": 146
+    },
+    {
+      "cutoff": 0.07035,
+      "approval_rate": 0.998,
+      "expected_loss_per_1b": 5851310.52,
+      "realized_loss_per_1b": 4055935.48,
+      "defaults_approved": 695,
+      "good_rejected": 146
+    },
+    {
+      "cutoff": 0.07538,
+      "approval_rate": 0.998,
+      "expected_loss_per_1b": 5851310.52,
+      "realized_loss_per_1b": 4055935.48,
+      "defaults_approved": 695,
+      "good_rejected": 146
+    },
+    {
+      "cutoff": 0.0804,
+      "approval_rate": 0.99949,
+      "expected_loss_per_1b": 5891607.06,
+      "realized_loss_per_1b": 4126079.92,
+      "defaults_approved": 709,
+      "good_rejected": 37
+    },
+    {
+      "cutoff": 0.08543,
+      "approval_rate": 0.99965,
+      "expected_loss_per_1b": 5896056.2,
+      "realized_loss_per_1b": 4130570.88,
+      "defaults_approved": 711,
+      "good_rejected": 26
+    },
+    {
+      "cutoff": 0.09045,
+      "approval_rate": 0.99965,
+      "expected_loss_per_1b": 5896056.2,
+      "realized_loss_per_1b": 4130570.88,
+      "defaults_approved": 711,
+      "good_rejected": 26
+    },
+    {
+      "cutoff": 0.09548,
+      "approval_rate": 0.99976,
+      "expected_loss_per_1b": 5898929.99,
+      "realized_loss_per_1b": 4130570.88,
+      "defaults_approved": 711,
+      "good_rejected": 17
+    },
+    {
+      "cutoff": 0.1005,
+      "approval_rate": 0.99976,
+      "expected_loss_per_1b": 5898929.99,
+      "realized_loss_per_1b": 4130570.88,
+      "defaults_approved": 711,
+      "good_rejected": 17
+    },
+    {
+      "cutoff": 0.10553,
+      "approval_rate": 0.99976,
+      "expected_loss_per_1b": 5898929.99,
+      "realized_loss_per_1b": 4130570.88,
+      "defaults_approved": 711,
+      "good_rejected": 17
+    },
+    {
+      "cutoff": 0.11055,
+      "approval_rate": 0.99995,
+      "expected_loss_per_1b": 5906296.49,
+      "realized_loss_per_1b": 4131542.95,
+      "defaults_approved": 712,
+      "good_rejected": 2
+    },
+    {
+      "cutoff": 0.11558,
+      "approval_rate": 0.99995,
+      "expected_loss_per_1b": 5906296.49,
+      "realized_loss_per_1b": 4131542.95,
+      "defaults_approved": 712,
+      "good_rejected": 2
+    },
+    {
+      "cutoff": 0.1206,
+      "approval_rate": 0.99995,
+      "expected_loss_per_1b": 5906296.49,
+      "realized_loss_per_1b": 4131542.95,
+      "defaults_approved": 712,
+      "good_rejected": 2
+    },
+    {
+      "cutoff": 0.12563,
+      "approval_rate": 0.99995,
+      "expected_loss_per_1b": 5906296.49,
+      "realized_loss_per_1b": 4131542.95,
+      "defaults_approved": 712,
+      "good_rejected": 2
+    },
+    {
+      "cutoff": 0.13065,
+      "approval_rate": 0.99995,
+      "expected_loss_per_1b": 5906296.49,
+      "realized_loss_per_1b": 4131542.95,
+      "defaults_approved": 712,
+      "good_rejected": 2
+    },
+    {
+      "cutoff": 0.13568,
+      "approval_rate": 0.99996,
+      "expected_loss_per_1b": 5906731.45,
+      "realized_loss_per_1b": 4131542.95,
+      "defaults_approved": 712,
+      "good_rejected": 1
+    },
+    {
+      "cutoff": 0.1407,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.14573,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.15075,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.15578,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.1608,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.16583,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.17085,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.17588,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.1809,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.18593,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.19095,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.19598,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.20101,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.20603,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.21106,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.21608,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.22111,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.22613,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.23116,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.23618,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.24121,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.24623,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.25126,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.25628,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.26131,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.26633,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.27136,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.27638,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.28141,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.28643,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.29146,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.29648,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.30151,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.30653,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.31156,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.31658,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.32161,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.32663,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.33166,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.33668,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.34171,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.34673,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.35176,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.35678,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.36181,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.36683,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.37186,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.37688,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.38191,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.38693,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.39196,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.39698,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.40201,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.40704,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.41206,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.41709,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.42211,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.42714,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.43216,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.43719,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.44221,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.44724,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.45226,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.45729,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.46231,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.46734,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.47236,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.47739,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.48241,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.48744,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.49246,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.49749,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.50251,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.50754,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.51256,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.51759,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.52261,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.52764,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.53266,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.53769,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.54271,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.54774,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.55276,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.55779,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.56281,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.56784,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.57286,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.57789,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.58291,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.58794,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.59296,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.59799,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.60302,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.60804,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.61307,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.61809,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.62312,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.62814,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.63317,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.63819,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.64322,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.64824,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.65327,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.65829,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.66332,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.66834,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.67337,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.67839,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.68342,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.68844,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.69347,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.69849,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.70352,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.70854,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.71357,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.71859,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.72362,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.72864,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.73367,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.73869,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.74372,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.74874,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.75377,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.75879,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.76382,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.76884,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.77387,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.77889,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.78392,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.78894,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.79397,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.79899,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.80402,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.80905,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.81407,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.8191,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.82412,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.82915,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.83417,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.8392,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.84422,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.84925,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.85427,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.8593,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.86432,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.86935,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.87437,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.8794,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.88442,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.88945,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.89447,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.8995,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.90452,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.90955,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.91457,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.9196,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.92462,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.92965,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.93467,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.9397,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.94472,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.94975,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.95477,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.9598,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.96482,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.96985,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.97487,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.9799,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.98492,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.98995,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.99497,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 1.0,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 5908439.61,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    }
+  ],
+  "scorecard_curve": [
+    {
+      "cutoff": 0.0,
+      "approval_rate": 0.0,
+      "expected_loss_per_1b": 0.0,
+      "realized_loss_per_1b": 0.0,
+      "defaults_approved": 0,
+      "good_rejected": 81699
+    },
+    {
+      "cutoff": 0.00503,
+      "approval_rate": 0.82618,
+      "expected_loss_per_1b": 705183.89,
+      "realized_loss_per_1b": 2475566.3,
+      "defaults_approved": 398,
+      "good_rejected": 14009
+    },
+    {
+      "cutoff": 0.01005,
+      "approval_rate": 0.90134,
+      "expected_loss_per_1b": 946868.71,
+      "realized_loss_per_1b": 3043643.01,
+      "defaults_approved": 501,
+      "good_rejected": 7918
+    },
+    {
+      "cutoff": 0.01508,
+      "approval_rate": 0.94217,
+      "expected_loss_per_1b": 1150440.34,
+      "realized_loss_per_1b": 3466006.68,
+      "defaults_approved": 572,
+      "good_rejected": 4624
+    },
+    {
+      "cutoff": 0.0201,
+      "approval_rate": 0.97954,
+      "expected_loss_per_1b": 1419165.18,
+      "realized_loss_per_1b": 3893425.1,
+      "defaults_approved": 658,
+      "good_rejected": 1630
+    },
+    {
+      "cutoff": 0.02513,
+      "approval_rate": 0.9867,
+      "expected_loss_per_1b": 1480082.83,
+      "realized_loss_per_1b": 3977081.3,
+      "defaults_approved": 679,
+      "good_rejected": 1061
+    },
+    {
+      "cutoff": 0.03015,
+      "approval_rate": 0.99586,
+      "expected_loss_per_1b": 1569831.28,
+      "realized_loss_per_1b": 4086905.57,
+      "defaults_approved": 701,
+      "good_rejected": 328
+    },
+    {
+      "cutoff": 0.03518,
+      "approval_rate": 0.99977,
+      "expected_loss_per_1b": 1616834.66,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 19
+    },
+    {
+      "cutoff": 0.0402,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.04523,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.05025,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.05528,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.0603,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.06533,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.07035,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.07538,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.0804,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.08543,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.09045,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.09548,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.1005,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.10553,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.11055,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.11558,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.1206,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.12563,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.13065,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.13568,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.1407,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.14573,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.15075,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.15578,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.1608,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.16583,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.17085,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.17588,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.1809,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.18593,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.19095,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.19598,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.20101,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.20603,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.21106,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.21608,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.22111,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.22613,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.23116,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.23618,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.24121,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.24623,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.25126,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.25628,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.26131,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.26633,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.27136,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.27638,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.28141,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.28643,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.29146,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.29648,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.30151,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.30653,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.31156,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.31658,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.32161,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.32663,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.33166,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.33668,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.34171,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.34673,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.35176,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.35678,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.36181,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.36683,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.37186,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.37688,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.38191,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.38693,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.39196,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.39698,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.40201,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.40704,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.41206,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.41709,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.42211,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.42714,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.43216,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.43719,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.44221,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.44724,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.45226,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.45729,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.46231,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.46734,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.47236,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.47739,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.48241,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.48744,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.49246,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.49749,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.50251,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.50754,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.51256,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.51759,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.52261,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.52764,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.53266,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.53769,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.54271,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.54774,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.55276,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.55779,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.56281,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.56784,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.57286,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.57789,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.58291,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.58794,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.59296,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.59799,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.60302,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.60804,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.61307,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.61809,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.62312,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.62814,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.63317,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.63819,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.64322,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.64824,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.65327,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.65829,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.66332,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.66834,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.67337,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.67839,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.68342,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.68844,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.69347,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.69849,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.70352,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.70854,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.71357,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.71859,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.72362,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.72864,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.73367,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.73869,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.74372,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.74874,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.75377,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.75879,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.76382,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.76884,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.77387,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.77889,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.78392,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.78894,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.79397,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.79899,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.80402,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.80905,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.81407,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.8191,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.82412,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.82915,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.83417,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.8392,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.84422,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.84925,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.85427,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.8593,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.86432,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.86935,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.87437,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.8794,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.88442,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.88945,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.89447,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.8995,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.90452,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.90955,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.91457,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.9196,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.92462,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.92965,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.93467,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.9397,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.94472,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.94975,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.95477,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.9598,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.96482,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.96985,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.97487,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.9799,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.98492,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.98995,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 0.99497,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    },
+    {
+      "cutoff": 1.0,
+      "approval_rate": 1.0,
+      "expected_loss_per_1b": 1619635.45,
+      "realized_loss_per_1b": 4141496.93,
+      "defaults_approved": 714,
+      "good_rejected": 0
+    }
+  ]
+}

@@ -328,9 +328,13 @@ Work through these in order. **Do not start a phase before the previous one's cr
       on every request/response; `/score` discriminates (risky 16.7% vs safe 0%). Serves
       committed artifacts + the deployed calibrated-logistic (no DB, cold-start safe).
 
-- [ ] **Phase 8 — Frontend.** Cutoff panel first, then the rest.
-      *Accept when:* screenshots at 1440px and 390px have been rendered **and actually
-      looked at**, and Lighthouse performance is above 90.
+- [~] **Phase 8 — Frontend.** Next.js risk-desk dashboard built to the design system
+      (#0B0E14, IBM Plex Mono tabular nums, one accent, red for loss only, hairline borders,
+      no gradients). Panels: metrics strip, ⭐ approval-cutoff (reads static JSON, instant),
+      reliability curve, vintage panel, live /score form, model card. Static build (187kB
+      first load). Screenshots at 1440px and 390px rendered and reviewed — no horizontal
+      scroll, 2×2 stats on mobile. Keep-warm GitHub Action pings /health. **Vercel deploy
+      pending — human-only (Joey; set Root Directory = web).**
 
 - [ ] **Phase 9 — Write-up.** README, model card, screen recording.
       *Accept when:* a stranger can read the README and state the headline number.

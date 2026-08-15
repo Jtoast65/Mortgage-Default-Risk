@@ -1,0 +1,17 @@
+name: keep-warm
+# Ping the Render API so it doesn't cold-start on a visitor (free tier sleeps when idle).
+on:
+  schedule:
+    - cron: "*/12 * * * *"   # every 12 minutes
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping /health
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 90 \
+            https://mortgage-default-risk-api.onrender.com/health)
+          echo "health: $code"
+          test "$code" = "200"
