@@ -1,14 +1,18 @@
 # Mortgage Default Risk — Calibrated Probabilities of Default
 
-> **Status: scaffolding (Phase 0).** Metrics are `TBD` until the pipeline runs on real data.
-> No fabricated numbers appear in this README — see PLAN.md.
+> **Status: models + economics complete (Phases 0–5).** API and dashboard next.
+> Every number here is computed from real data — no placeholders (see PLAN.md).
 
 A credit-risk model that predicts probability of default (PD) on US mortgages, **calibrated**
 so the probabilities are usable for loan pricing, plus a risk-desk dashboard where you drag
 an approval cutoff and watch approval rate trade against expected loss in dollars.
 
-**Headline number:** `TBD` — *"At a 4% PD cutoff the model approves __% of applications and
-reduces expected loss by $__M per $1B originated versus the FICO/LTV scorecard."*
+**Headline number:** *At a 4% PD cutoff the calibrated model approves **94.4%** of
+applications and reduces realized credit losses by **~$480K per $1B originated (13.7%)**
+versus the FICO×LTV scorecard at the same approval rate* (Experiment A, test 2020–21;
+empirical LGD 0.456).
+
+![Approval rate vs credit loss](artifacts/cutoff_tradeoff.png)
 
 ## Why a vintage split (not random)
 
@@ -45,6 +49,16 @@ tuned against the held-out test set to hide that.
 its raw probabilities are badly inflated (Brier 0.050). Isotonic regression fit on the
 validation split alone cuts that to 0.0087 — an 83% reduction — bringing the probabilities
 onto the diagonal (see `artifacts/reliability_curve_A.png`) so they can price a loan.
+
+## Economics
+
+Calibrated PDs turn into dollars: **EL = PD × LGD × EAD**, with EAD approximated by original
+UPB. **LGD is empirical — 0.456** — the dollar-weighted realized loss over 15,130 disposed
+defaulted loans (short sale / charge-off / REO), not an assumption. Sweeping the approval-PD
+cutoff traces the approval-rate ↔ loss frontier above; the deployed calibrated model
+(logistic + isotonic) dominates the FICO×LTV scorecard at every approval rate. The full
+200-point sweep is precomputed to `artifacts/cutoff_curve.json` so the dashboard slider is
+instant.
 
 ## Reproduce
 

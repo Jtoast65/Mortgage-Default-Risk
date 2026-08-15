@@ -309,8 +309,11 @@ Work through these in order. **Do not start a phase before the previous one's cr
       not logistic (0.791) — reported honestly as a regime-shift finding, not tuned away.
       Native categorical (incl. msa), scale_pos_weight, auc early-stopping on validation.
 
-- [ ] **Phase 5 — Economics.** LGD, expected loss, cutoff sweep to JSON.
-      *Accept when:* the headline sentence in section 7 can be written with real numbers.
+- [x] **Phase 5 — Economics.** LGD, expected loss, cutoff sweep to JSON.
+      *Accepted:* empirical LGD 0.456 (dollar-weighted, 15,130 dispositions). Headline —
+      at a 4% PD cutoff the calibrated logistic approves 94.4% and cuts realized losses
+      ~$480K per $1B (13.7%) vs the scorecard at matched approval. 200-point sweep +
+      scorecard curve in artifacts/cutoff_curve.json; tradeoff plot rendered.
 
 - [ ] **Phase 6 — Experiment B.** The regime break.
       *Accept when:* the degradation is quantified and written up honestly.
