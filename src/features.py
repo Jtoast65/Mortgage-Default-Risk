@@ -77,6 +77,37 @@ def assert_no_performance_leakage(feature_columns,
             raise LeakageError(f"column not in origination allow-list: {col!r}")
 
 
+def clean_features(df: pd.DataFrame, missing_columns=None) -> pd.DataFrame:
+    """Map sentinels to null and add missing indicators. Shared by the batch matrix and the
+    single-loan scoring path so a scored loan is cleaned identically to training.
+
+    `missing_columns`: if given (a fixed list of `<feat>_missing` names from the trained
+    model), those exact indicators are produced -- so a one-row score matches the schema the
+    pipeline was fit on. If None, indicators are added only where this frame has missings.
+    """
+    df = df.copy()
+    # Numeric: coerce, then null out anything outside the valid range (kills sentinels).
+    for col, (lo, hi) in NUMERIC_RANGES.items():
+        x = pd.to_numeric(df[col], errors="coerce")
+        df[col] = x.where((x >= lo) & (x <= hi))
+
+    # Categorical: strip, map coded-missing tokens to null. Land as object + np.nan (not
+    # the StringDtype pd.NA) so sklearn's imputer/encoder accept it identically in the batch
+    # matrix and the single-loan scoring path.
+    for col in CATEGORICAL_FEATURES:
+        s = df[col].astype("string").str.strip()
+        s = s.where(~s.isin(CATEGORICAL_MISSING))
+        df[col] = s.astype(object).where(s.notna(), np.nan)
+
+    if missing_columns is None:
+        bases = [c for c in ALLOWED_FEATURES if df[c].isna().any()]
+    else:
+        bases = [c[:-len("_missing")] for c in missing_columns]
+    for base in bases:
+        df[f"{base}_missing"] = df[base].isna().astype(np.int8)
+    return df
+
+
 def build_feature_matrix(orig_source: str | None = None,
                          con: duckdb.DuckDBPyConnection | None = None) -> pd.DataFrame:
     """Load origination parquet, clean sentinels, add missing indicators, guard leakage."""
@@ -84,22 +115,7 @@ def build_feature_matrix(orig_source: str | None = None,
     source = orig_source or f"read_parquet('{ORIG_GLOB}')"
     cols = ", ".join(["loan_id", "vintage", *ALLOWED_FEATURES])
     df = con.sql(f"SELECT {cols} FROM {source}").df()
-
-    # Numeric: coerce, then null out anything outside the valid range (kills sentinels).
-    for col, (lo, hi) in NUMERIC_RANGES.items():
-        x = pd.to_numeric(df[col], errors="coerce")
-        df[col] = x.where((x >= lo) & (x <= hi))
-
-    # Categorical: strip, map coded-missing tokens to null.
-    for col in CATEGORICAL_FEATURES:
-        s = df[col].astype("string").str.strip()
-        df[col] = s.where(~s.isin(CATEGORICAL_MISSING))
-
-    # Explicit missing indicators (only for features that actually have missings).
-    for col in ALLOWED_FEATURES:
-        if df[col].isna().any():
-            df[f"{col}_missing"] = df[col].isna().astype(np.int8)
-
+    df = clean_features(df)
     assert_no_performance_leakage(df.columns)
     return df
 

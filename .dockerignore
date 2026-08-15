@@ -1,0 +1,11 @@
+data/
+.venv/
+.git/
+tests/
+notebooks/
+*.pyc
+__pycache__/
+.pytest_cache/
+.DS_Store
+web/node_modules/
+web/.next/

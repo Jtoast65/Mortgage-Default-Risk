@@ -31,6 +31,7 @@ experiments:
 	python -m src.calibrate A && python -m src.calibrate B
 	python -m src.economics A && python -m src.economics B
 	python -m src.evaluate compare
+	python -m src.serving             # persist the deployed calibrated-logistic for /score
 
 serve:
 	uvicorn api.main:app --reload --port 8000

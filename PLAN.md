@@ -322,8 +322,10 @@ Work through these in order. **Do not start a phase before the previous one's cr
       crisis model under-predicts defaults 41% (0.59× actual) because it was calibrated on
       pre-crisis 2006. Modern model over-predicts 50% (COVID-inflated 2019 validation).
 
-- [ ] **Phase 7 — API.** All five endpoints, deployed to Render.
-      *Accept when:* `/docs` loads publicly and `/score` returns a sane PD for a test loan.
+- [~] **Phase 7 — API.** All five endpoints built and verified locally (`/health`,
+      `/metrics`, `/cutoff-curve`, `/score`, `/vintage-performance`); Pydantic on every
+      request/response, `/docs` loads (200), `/score` discriminates (risky 16.7% vs safe
+      0%). Dockerfile + render.yaml ready. **Render deploy pending — human-only (Joey).**
 
 - [ ] **Phase 8 — Frontend.** Cutoff panel first, then the rest.
       *Accept when:* screenshots at 1440px and 390px have been rendered **and actually

@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: mortgage-default-risk-api
+    runtime: docker
+    repo: https://github.com/Jtoast65/Mortgage-Default-Risk
+    branch: main
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: MODEL_VERSION
+        value: v1

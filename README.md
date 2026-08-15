@@ -85,6 +85,23 @@ through a regime shift while its loss forecasts go badly wrong. Reported, not hi
 the reason the modern model here (A) over-predicts by 50% is the mirror image: it was
 calibrated on the COVID-inflated 2019 vintage.
 
+## API
+
+FastAPI, Pydantic on every request/response, OpenAPI docs at `/docs`. Serves the committed
+artifacts and the deployed calibrated-logistic model, so it answers even on a cold start.
+
+| Endpoint | Returns |
+|---|---|
+| `GET /health` | Liveness (keep-warm target) |
+| `GET /metrics` | AUC / KS / Brier per experiment and model |
+| `GET /cutoff-curve?experiment=A` | The precomputed 200-point sweep |
+| `POST /score` | Origination features in → calibrated PD, risk band, expected loss |
+| `GET /vintage-performance` | Default rate by origination year |
+
+```bash
+make serve   # http://localhost:8000/docs
+```
+
 ## Reproduce
 
 ```bash
