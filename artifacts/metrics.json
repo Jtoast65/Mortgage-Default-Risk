@@ -73,5 +73,80 @@
       }
     },
     "best_iteration": 124
+  },
+  "B": {
+    "experiment": "B",
+    "split": {
+      "train": [
+        1999,
+        2005
+      ],
+      "val": [
+        2006,
+        2006
+      ],
+      "test": [
+        2007,
+        2009
+      ]
+    },
+    "counts": {
+      "train": 234796,
+      "validation": 41093,
+      "test": 113097
+    },
+    "models": {
+      "scorecard": {
+        "validation": {
+          "n": 41093,
+          "base_rate": 0.02655,
+          "auc": 0.758,
+          "ks": 0.3943,
+          "brier": 0.025584
+        },
+        "test": {
+          "n": 113097,
+          "base_rate": 0.0334,
+          "auc": 0.7987,
+          "ks": 0.4584,
+          "brier": 0.032168
+        }
+      },
+      "logistic": {
+        "validation": {
+          "n": 41093,
+          "base_rate": 0.02655,
+          "auc": 0.8033,
+          "ks": 0.4599,
+          "brier": 0.025086
+        },
+        "test": {
+          "n": 113097,
+          "base_rate": 0.0334,
+          "auc": 0.8551,
+          "ks": 0.5563,
+          "brier": 0.03107
+        }
+      },
+      "xgboost": {
+        "test": {
+          "n": 113097,
+          "base_rate": 0.0334,
+          "auc": 0.816,
+          "ks": 0.476,
+          "brier": 0.120128
+        }
+      },
+      "xgboost_calibrated": {
+        "test": {
+          "n": 113097,
+          "base_rate": 0.0334,
+          "auc": 0.8149,
+          "ks": 0.472,
+          "brier": 0.030887
+        }
+      }
+    },
+    "best_iteration": 85
   }
 }

@@ -126,7 +126,7 @@ def build_cutoff_curve(exp: str = "A", con: duckdb.DuckDBPyConnection | None = N
         "scorecard_curve": scorecard_curve.to_dict(orient="records"),
     }
     ARTIFACTS.mkdir(exist_ok=True)
-    (ARTIFACTS / "cutoff_curve.json").write_text(json.dumps(out, indent=2))
+    (ARTIFACTS / f"cutoff_curve_{exp}.json").write_text(json.dumps(out, indent=2))
     return out
 
 
@@ -172,13 +172,20 @@ def plot_cutoff_tradeoff(curve: dict) -> None:
     for t in leg.get_texts():
         t.set_color(_TEXT)
     fig.tight_layout()
-    fig.savefig(ARTIFACTS / "cutoff_tradeoff.png", facecolor=_BG, bbox_inches="tight")
+    fig.savefig(ARTIFACTS / f"cutoff_tradeoff_{curve['experiment']}.png",
+                facecolor=_BG, bbox_inches="tight")
     plt.close(fig)
 
 
 if __name__ == "__main__":
-    r = build_cutoff_curve("A")
+    import sys
+    exp = sys.argv[1] if len(sys.argv) > 1 else "A"
+    r = build_cutoff_curve(exp)
     plot_cutoff_tradeoff(r)
+    h = r["headline"]
+    print(f"[{exp}] LGD={r['lgd']} ({r['lgd_source']}) | base rate {r['base_default_rate']:.2%}")
+    print(f"[{exp}] 4% cutoff: approve {h['approval_rate']:.1%}, "
+          f"reduce loss ${h['reduction_per_1b']:,.0f}/$1B ({h['reduction_pct']}%) vs scorecard")
     h = r["headline"]
     print(f"LGD = {r['lgd']} ({r['lgd_source']}, n={r['lgd_n_dispositions']:,})")
     print(f"At a {h['cutoff']:.0%} PD cutoff: approve {h['approval_rate']:.1%} of applications,")

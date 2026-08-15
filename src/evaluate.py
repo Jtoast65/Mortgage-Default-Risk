@@ -12,6 +12,7 @@ import json
 from pathlib import Path
 
 import duckdb
+import numpy as np
 
 from src import labels
 
@@ -116,5 +117,88 @@ def plot_vintage_default_rate(con: duckdb.DuckDBPyConnection | None = None) -> d
     }
 
 
+def experiment_comparison(con: duckdb.DuckDBPyConnection | None = None) -> dict:
+    """Quantify the regime break: deployed model's discrimination and calibration, A vs B.
+
+    Writes artifacts/experiment_comparison.json and a predicted-vs-actual default-rate plot.
+    The story: discrimination holds (even improves) in the crisis, but calibration -- the
+    absolute PD level -- breaks, because the model was calibrated on a pre-crisis vintage.
+    """
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from sklearn.isotonic import IsotonicRegression
+
+    from src import models
+    from src.models import make_logistic, metrics, split_experiment
+
+    df = models.load_modeling_frame(con)
+    rows = {}
+    for exp in ("A", "B"):
+        tr, va, te = split_experiment(df, exp)
+        lr = make_logistic(tr.columns)
+        lr.fit(tr, tr["default_label"])
+        iso = IsotonicRegression(out_of_bounds="clip").fit(
+            lr.predict_proba(va)[:, 1], va["default_label"])
+        p = iso.transform(lr.predict_proba(te)[:, 1])
+        actual = float(te["default_label"].mean())
+        pred = float(p.mean())
+        rows[exp] = {
+            "label": "modern 2010–21" if exp == "A" else "crisis 1999–09",
+            "train_base_rate": round(float(tr["default_label"].mean()), 5),
+            "val_base_rate": round(float(va["default_label"].mean()), 5),
+            "test_base_rate": round(actual, 5),
+            "mean_predicted_pd": round(pred, 5),
+            "predicted_over_actual": round(pred / actual, 3),
+            **metrics(te["default_label"], p),
+        }
+    (ARTIFACTS / "experiment_comparison.json").write_text(json.dumps(rows, indent=2))
+
+    # Predicted vs actual default rate, per experiment.
+    fig, ax = plt.subplots(figsize=(7, 4.4), dpi=140)
+    fig.patch.set_facecolor(_BG)
+    ax.set_facecolor(_BG)
+    labels = [rows[e]["label"] for e in ("A", "B")]
+    x = np.arange(2)
+    w = 0.34
+    actual = [rows[e]["test_base_rate"] * 100 for e in ("A", "B")]
+    pred = [rows[e]["mean_predicted_pd"] * 100 for e in ("A", "B")]
+    ax.bar(x - w / 2, actual, w, color=_MUTED, label="actual default rate")
+    ax.bar(x + w / 2, pred, w, color=_ACCENT, label="mean predicted PD")
+    for i, e in enumerate(("A", "B")):
+        r = rows[e]["predicted_over_actual"]
+        ax.annotate(f"{r:.2f}× {'over' if r > 1 else 'under'}",
+                    xy=(x[i] + w / 2, pred[i]), xytext=(x[i] + w / 2, pred[i] + 0.12),
+                    color=_RED if r < 1 else _TEXT, fontsize=9, ha="center")
+    for spine in ("top", "right"):
+        ax.spines[spine].set_visible(False)
+    for spine in ("left", "bottom"):
+        ax.spines[spine].set_color(_GRID)
+    ax.yaxis.grid(True, color=_GRID, lw=0.6)
+    ax.set_axisbelow(True)
+    ax.tick_params(colors=_MUTED, length=0)
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels, color=_MUTED)
+    ax.set_ylabel("default rate (%)", color=_MUTED, fontsize=10)
+    ax.set_title("Calibration under regime change (test)", color=_TEXT, fontsize=13,
+                 loc="left", pad=12)
+    leg = ax.legend(frameon=False, fontsize=9, loc="upper left")
+    for t in leg.get_texts():
+        t.set_color(_TEXT)
+    fig.text(0.13, -0.02,
+             "Discrimination holds (AUC "
+             f"{rows['A']['auc']:.2f}→{rows['B']['auc']:.2f}); the crisis model under-predicts "
+             "defaults by 41% — it was calibrated on pre-crisis 2006.",
+             color=_MUTED, fontsize=8.5)
+    fig.tight_layout()
+    fig.savefig(ARTIFACTS / "experiment_comparison.png", facecolor=_BG, bbox_inches="tight")
+    plt.close(fig)
+    return rows
+
+
 if __name__ == "__main__":
-    print(plot_vintage_default_rate())
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "compare":
+        print(json.dumps(experiment_comparison(), indent=2))
+    else:
+        print(plot_vintage_default_rate())

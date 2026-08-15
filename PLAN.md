@@ -315,8 +315,12 @@ Work through these in order. **Do not start a phase before the previous one's cr
       ~$480K per $1B (13.7%) vs the scorecard at matched approval. 200-point sweep +
       scorecard curve in artifacts/cutoff_curve.json; tradeoff plot rendered.
 
-- [ ] **Phase 6 — Experiment B.** The regime break.
-      *Accept when:* the degradation is quantified and written up honestly.
+- [x] **Phase 6 — Experiment B.** The regime break.
+      *Accepted:* quantified in artifacts/experiment_comparison.{json,png}. Counterintuitive
+      finding, reported honestly: discrimination does NOT degrade (AUC 0.79→0.85 — crisis
+      defaults are more predictable at origination); the break is in **calibration** — the
+      crisis model under-predicts defaults 41% (0.59× actual) because it was calibrated on
+      pre-crisis 2006. Modern model over-predicts 50% (COVID-inflated 2019 validation).
 
 - [ ] **Phase 7 — API.** All five endpoints, deployed to Render.
       *Accept when:* `/docs` loads publicly and `/score` returns a sane PD for a test loan.

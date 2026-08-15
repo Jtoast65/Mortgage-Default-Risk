@@ -1,4 +1,4 @@
-.PHONY: install ingest label features plots train calibrate economics serve test lint
+.PHONY: install ingest label features plots train calibrate economics experiments serve test lint
 
 install:
 	pip install -r requirements.txt
@@ -23,6 +23,14 @@ calibrate:
 
 economics:
 	python -m src.economics
+
+# Full model pipeline for both experiments (A = modern, B = crisis) + the regime comparison.
+experiments:
+	python -m src.evaluate            # vintage default-rate plot
+	python -m src.models A && python -m src.models B
+	python -m src.calibrate A && python -m src.calibrate B
+	python -m src.economics A && python -m src.economics B
+	python -m src.evaluate compare
 
 serve:
 	uvicorn api.main:app --reload --port 8000

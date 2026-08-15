@@ -12,7 +12,7 @@ applications and reduces realized credit losses by **~$480K per $1B originated (
 versus the FICO×LTV scorecard at the same approval rate* (Experiment A, test 2020–21;
 empirical LGD 0.456).
 
-![Approval rate vs credit loss](artifacts/cutoff_tradeoff.png)
+![Approval rate vs credit loss](artifacts/cutoff_tradeoff_A.png)
 
 ## Why a vintage split (not random)
 
@@ -57,16 +57,42 @@ UPB. **LGD is empirical — 0.456** — the dollar-weighted realized loss over 1
 defaulted loans (short sale / charge-off / REO), not an assumption. Sweeping the approval-PD
 cutoff traces the approval-rate ↔ loss frontier above; the deployed calibrated model
 (logistic + isotonic) dominates the FICO×LTV scorecard at every approval rate. The full
-200-point sweep is precomputed to `artifacts/cutoff_curve.json` so the dashboard slider is
-instant.
+200-point sweep is precomputed to `artifacts/cutoff_curve_A.json` so the dashboard slider
+is instant.
+
+## Crisis stress test — model risk under regime change
+
+Experiment B repeats everything on a crisis split: **train 1999–2005, validation 2006, test
+2007–2009.** The result is more interesting than a simple "it degrades":
+
+![Calibration under regime change](artifacts/experiment_comparison.png)
+
+| | Modern (A) | Crisis (B) |
+|---|---|---|
+| Test base default rate | 0.87% | 3.34% |
+| AUC | 0.789 | **0.854** |
+| Mean predicted PD | 1.30% | 1.98% |
+| **Predicted ÷ actual** | 1.50× (over) | **0.59× (under)** |
+
+**Discrimination doesn't break — calibration does.** The model *ranks* crisis-era loans even
+better than modern ones (AUC 0.85 vs 0.79): subprime loans were identifiably risky at
+origination. But its **absolute probabilities are 41% too low** on 2007–2009, because it was
+calibrated on pre-crisis 2006 and had never seen crisis-level default frequencies. A lender
+pricing loans off those PDs would have systematically under-reserved heading into 2008.
+
+That is the distinction a risk function is paid to make: a model can keep its rank-ordering
+through a regime shift while its loss forecasts go badly wrong. Reported, not hidden — and
+the reason the modern model here (A) over-predicts by 50% is the mirror image: it was
+calibrated on the COVID-inflated 2019 vintage.
 
 ## Reproduce
 
 ```bash
 make install
 # obtain data — see scripts/download_instructions.md
-make ingest label train calibrate economics
-make serve      # API on :8000
+make ingest label          # parse to parquet, build the 24-month default label
+make experiments           # both experiments (modern + crisis) + all artifacts
+make serve                 # API on :8000
 ```
 
 Full build spec and phase plan: [PLAN.md](PLAN.md).

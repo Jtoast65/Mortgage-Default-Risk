@@ -1,0 +1,28 @@
+{
+  "A": {
+    "label": "modern 2010\u201321",
+    "train_base_rate": 0.00515,
+    "val_base_rate": 0.03295,
+    "test_base_rate": 0.00866,
+    "mean_predicted_pd": 0.01302,
+    "predicted_over_actual": 1.502,
+    "n": 82413,
+    "base_rate": 0.00866,
+    "auc": 0.7892,
+    "ks": 0.441,
+    "brier": 0.008494
+  },
+  "B": {
+    "label": "crisis 1999\u201309",
+    "train_base_rate": 0.0102,
+    "val_base_rate": 0.02655,
+    "test_base_rate": 0.0334,
+    "mean_predicted_pd": 0.01984,
+    "predicted_over_actual": 0.594,
+    "n": 113097,
+    "base_rate": 0.0334,
+    "auc": 0.8541,
+    "ks": 0.5549,
+    "brier": 0.030097
+  }
+}

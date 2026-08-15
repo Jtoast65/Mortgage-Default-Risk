@@ -85,3 +85,13 @@ def test_experiment_split_uses_declared_vintages():
     assert set(train["vintage"]) == {2010, 2015}
     assert set(val["vintage"]) == {2018}
     assert set(test["vintage"]) == {2020}
+
+
+def test_experiment_b_is_the_crisis_split():
+    df = pd.DataFrame({"vintage": [1999, 2005, 2006, 2007, 2009, 2010]})
+    df["default_label"] = 0
+    train, val, test = models.split_experiment(df, "B")
+    assert set(train["vintage"]) == {1999, 2005}      # calm pre-crisis
+    assert set(val["vintage"]) == {2006}
+    assert set(test["vintage"]) == {2007, 2009}       # the crisis
+    assert 2010 not in set(test["vintage"])           # modern era excluded from B
