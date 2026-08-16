@@ -14,7 +14,7 @@ applications and reduces realized credit losses by **~$480K per $1B originated (
 versus the FICO×LTV scorecard at the same approval rate* (Experiment A, test 2020–21;
 empirical LGD 0.456).
 
-![Approval rate vs credit loss](artifacts/cutoff_tradeoff_A.png)
+[![Dashboard](docs/dashboard.png)](https://mortgage-default-risk.vercel.app)
 
 ## Why a vintage split (not random)
 
@@ -25,9 +25,9 @@ a model is actually deployed — trained on history, scored on originations it h
 
 ## Data
 
-Freddie Mac Single-Family Loan-Level **official sample** (~1.3M loans; 50k/year). The raw
-data is **not** in this repo — the licence prohibits redistribution, so `data/` is
-gitignored. See `scripts/download_instructions.md` to obtain it.
+Freddie Mac Single-Family Loan-Level **official sample** (~1.4M loans, 50k/year, 1999–2026;
+~75M monthly performance rows). The raw data is **not** in this repo — the licence prohibits
+redistribution, so `data/` is gitignored. See `scripts/download_instructions.md` to obtain it.
 
 ## Results
 
@@ -50,7 +50,9 @@ tuned against the held-out test set to hide that.
 **Calibration works as intended.** XGBoost trained with `scale_pos_weight` ranks well but
 its raw probabilities are badly inflated (Brier 0.050). Isotonic regression fit on the
 validation split alone cuts that to 0.0087 — an 83% reduction — bringing the probabilities
-onto the diagonal (see `artifacts/reliability_curve_A.png`) so they can price a loan.
+onto the diagonal so they can price a loan.
+
+![Reliability curve](artifacts/reliability_curve_A.png)
 
 ## Economics
 
@@ -61,6 +63,8 @@ cutoff traces the approval-rate ↔ loss frontier above; the deployed calibrated
 (logistic + isotonic) dominates the FICO×LTV scorecard at every approval rate. The full
 200-point sweep is precomputed to `artifacts/cutoff_curve_A.json` so the dashboard slider
 is instant.
+
+![Approval rate vs credit loss](artifacts/cutoff_tradeoff_A.png)
 
 ## Crisis stress test — model risk under regime change
 
@@ -106,6 +110,18 @@ artifacts and the deployed calibrated-logistic model, so it answers even on a co
 make serve   # http://localhost:8000/docs
 ```
 
+## Assumptions and limitations
+
+- **Prepayment is a competing risk, treated by censoring, not modelled jointly.** Loans that
+  prepay within the 24-month window without defaulting are dropped (405K of 1.36M). A full
+  treatment would model default and prepayment jointly (e.g. a competing-risks survival model).
+- **LGD is a single pooled constant (0.456).** Empirical and dollar-weighted, but not
+  conditioned on the loan — a production model would predict LGD per loan.
+- **2019 PDs are inflated by COVID-era forbearance**, which is reported as delinquency and so
+  trips the 180+ DPD label. Faithful to the data, but not "credit" default in the usual sense.
+- **The official 50k/year sample, not the full ~55M-loan dataset** — the real distribution,
+  but sampled.
+
 ## Reproduce
 
 ```bash
@@ -116,4 +132,4 @@ make experiments           # both experiments (modern + crisis) + all artifacts
 make serve                 # API on :8000
 ```
 
-Full build spec and phase plan: [PLAN.md](PLAN.md).
+Model card: [MODEL_CARD.md](MODEL_CARD.md) · full build spec and phase plan: [PLAN.md](PLAN.md).

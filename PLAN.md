@@ -335,8 +335,10 @@ Work through these in order. **Do not start a phase before the previous one's cr
       curve, vintage panel, live /score form, model card. Static 187kB first load; verified
       at 1440px and 390px (no horizontal scroll). og:image + favicon + keep-warm Action.
 
-- [ ] **Phase 9 — Write-up.** README, model card, screen recording.
-      *Accept when:* a stranger can read the README and state the headline number.
+- [~] **Phase 9 — Write-up.** README (headline above the fold, hero screenshot, live links,
+      why-vintage, results table, reliability + tradeoff + crisis images, assumptions &
+      limitations, reproduce) and standalone MODEL_CARD.md complete. **Screen recording
+      pending — human-only (Joey).**
 
 ---
 
