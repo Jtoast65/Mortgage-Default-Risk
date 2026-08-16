@@ -45,8 +45,8 @@ Stop and ask Joey when you reach one of these. Do not attempt to work around the
 - [x] **Register at Clarity Data Intelligence and accept the Freddie Mac licence.**
       Done 2026-08-13. Sample dataset 1999–2026 + layout docs downloaded.
 - [x] **Create the GitHub repo.** `github.com/Jtoast65/Mortgage-Default-Risk`.
-- [x] **Create the Render service** for the API (`mortgage-default-risk-api.onrender.com`).
-      Still to do: the **Vercel project** for the frontend.
+- [x] **Create the Render service** for the API (`mortgage-default-risk-api.onrender.com`)
+      and the **Vercel project** (`mortgage-default-risk.vercel.app`).
 - [ ] ~~Any `git push`~~ — **Claude may commit and push directly.** Joey has authorized
       Claude Code to run `git push` on his behalf. Still branch off the default branch for
       non-trivial work and summarize what was pushed.
@@ -328,13 +328,12 @@ Work through these in order. **Do not start a phase before the previous one's cr
       on every request/response; `/score` discriminates (risky 16.7% vs safe 0%). Serves
       committed artifacts + the deployed calibrated-logistic (no DB, cold-start safe).
 
-- [~] **Phase 8 — Frontend.** Next.js risk-desk dashboard built to the design system
-      (#0B0E14, IBM Plex Mono tabular nums, one accent, red for loss only, hairline borders,
-      no gradients). Panels: metrics strip, ⭐ approval-cutoff (reads static JSON, instant),
-      reliability curve, vintage panel, live /score form, model card. Static build (187kB
-      first load). Screenshots at 1440px and 390px rendered and reviewed — no horizontal
-      scroll, 2×2 stats on mobile. Keep-warm GitHub Action pings /health. **Vercel deploy
-      pending — human-only (Joey; set Root Directory = web).**
+- [x] **Phase 8 — Frontend.** Next.js risk-desk dashboard, **live at
+      `https://mortgage-default-risk.vercel.app`**. Design system honoured (#0B0E14, IBM Plex
+      Mono tabular nums, one accent, red for loss only, hairline borders, no gradients).
+      Panels: metrics strip, ⭐ approval-cutoff (reads static JSON, instant), reliability
+      curve, vintage panel, live /score form, model card. Static 187kB first load; verified
+      at 1440px and 390px (no horizontal scroll). og:image + favicon + keep-warm Action.
 
 - [ ] **Phase 9 — Write-up.** README, model card, screen recording.
       *Accept when:* a stranger can read the README and state the headline number.

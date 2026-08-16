@@ -1,7 +1,9 @@
 # Mortgage Default Risk — Calibrated Probabilities of Default
 
-> **Status: models + economics complete (Phases 0–5).** API and dashboard next.
 > Every number here is computed from real data — no placeholders (see PLAN.md).
+
+**Live:** [dashboard](https://mortgage-default-risk.vercel.app) ·
+[API docs](https://mortgage-default-risk-api.onrender.com/docs)
 
 A credit-risk model that predicts probability of default (PD) on US mortgages, **calibrated**
 so the probabilities are usable for loan pricing, plus a risk-desk dashboard where you drag
